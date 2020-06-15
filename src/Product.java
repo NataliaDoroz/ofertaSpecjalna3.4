@@ -4,10 +4,10 @@ public class Product {
     String description;
     Category category;
 
-    Product(String p_name, double p_price, String p_description, Category p_category) {
-        name = p_name;
-        price = p_price;
-        description = p_description;
-        category = p_category;
+    Product(String n, double p, String d, Category c) {
+        name = n;
+        price = p;
+        description = d;
+        category = c;
     }
 }

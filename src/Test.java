@@ -10,16 +10,18 @@ public class Test {
         SpecialOffer specialOffer1 = new SpecialOffer(product1, "Wielka promocja",
                 "10.06", "20.06", 0.2);
 
-        System.out.println("Produkt1: " + product1.name + "\t Cena: " + product1.price + "zł\t Opis: " + product1.description +
-                "\t Kategoria: " + product1.category.name + "\t  Opis kategorii: " + product1.category.description);
-        System.out.println("Produkt2: " + product2.name + "\t Cena: " + product2.price + "zł\t Opis: " + product2.description +
-                "\t Kategoria: " + product2.category.name + "\t  Opis kategorii: " + product2.category.description);
-        System.out.println("Produkt3: " + product3.name + "\t Cena: " + product3.price + "zł\t Opis: " + product3.description +
-                "\t Kategoria: " + product3.category.name + "\t  Opis kategorii: " + product3.category.description);
+        printProduct(product1, "Produkt1: ");
+        printProduct(product2, "Produkt2: ");
+        printProduct(product3, "Produkt3: ");
         System.out.println("Produkt4: " + product4.name + "\t Cena: " + product4.price + "zł\t Opis: " + product4.description);
 
         double discountDiscount = specialOffer1.discount * product1.price;
         System.out.println(specialOffer1.product.name + " \t" + specialOffer1.offer + " od " + specialOffer1.timeFrom + " do " + specialOffer1.timeTo +
                 " \t Jedyne: " + (product1.price - discountDiscount) + "zł!!!");
+    }
+
+    private static void printProduct(Product product1, String s) {
+        System.out.println(s + product1.name + "\t Cena: " + product1.price + "zł\t Opis: " + product1.description +
+                "\t Kategoria: " + product1.category.name + "\t  Opis kategorii: " + product1.category.description);
     }
 }
